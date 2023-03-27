@@ -1,12 +1,7 @@
 import React from "react";
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Login from "./pages/Login.jsx";
-import SignUp from "./pages/SignUp";
-import CreateBlog from "./pages/CreateBlog";
-import UpdateBlog from "./pages/UpdateBlog";
-import BlogFeed from "./pages/BlogFeed";
 import { BrowserRouter as Router ,Route, Routes } from "react-router-dom";
+import { BlogFeed, CreateBlog, Login, SignUp, UpdateBlog } from "./pages";
 import NavBar from "./components/NavBar";
 
 function App() {
@@ -19,8 +14,8 @@ function App() {
         <SignUp />
         <CreateBlog />
         <UpdateBlog />
-       
         <BlogFeed />
+
       </div>
       <Routes>
         <Route path="/" element={""} />
