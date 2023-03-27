@@ -1,6 +1,8 @@
-export { default as CreateBlog } from "./CreateBlog.jsx";
-export { default as BlogFeed } from "./BlogFeed.jsx";
-export { default as Login } from "./Login.jsx";
-export { default as SignUp } from "./SignUp.jsx";
-export { default as UpdateBlog } from "./UpdateBlog.jsx";
-export { default as ViewBlog } from "./ViewBlog.jsx";
+export { default as CreateBlog } from "./User/CreateBlog.jsx";
+export { default as BlogFeed } from "./Common/BlogFeed.jsx";
+export { default as LogIn } from "./User/LogIn.jsx";
+export { default as LogOut } from "./User/LogOut.jsx";
+export { default as Profile } from "./User/Profile.jsx";
+export { default as SignUp } from "./Common/SignUp.jsx";
+export { default as UpdateBlog } from "./User/UpdateBlog.jsx";
+export { default as ViewBlog } from "./Common/ViewBlog.jsx";

@@ -1,32 +1,25 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router ,Route, Routes } from "react-router-dom";
-import { BlogFeed, CreateBlog, Login, SignUp, UpdateBlog } from "./pages";
+import { BlogFeed, CreateBlog, LogIn, LogOut, Profile, SignUp, UpdateBlog } from "./pages";
 import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <Router>
       <NavBar />
-      <div className="bg-light min-vh-100" style={{ paddingTop: "70px" }}>
-        
-        <Login />
-        <SignUp />
-        <CreateBlog />
-        <UpdateBlog />
-        <BlogFeed />
-
+      <div className="bg-light d-flex flex-column justify-content-center align-items-center min-vh-100" style={{ paddingTop: "70px" }}>
+        <Routes>
+          <Route path="/" element={ <BlogFeed /> } />
+          <Route path="/signup" element={ <SignUp /> } />
+          <Route path="/login" element={ <LogIn /> } />
+          <Route path="/logout" element={ <LogOut /> } />
+          <Route path="/feed" element={ <BlogFeed /> } />
+          <Route path="/create" element={ <CreateBlog /> } />
+          <Route path="/profile" element={ <Profile /> } />
+          <Route path="/admin" element={""} />
+        </Routes>
       </div>
-      <Routes>
-        <Route path="/" element={""} />
-        <Route path="/signup" element={""} />
-        <Route path="/login" element={""} />
-        <Route path="/logout" element={""} />
-        <Route path="/feed" element={""} />
-        <Route path="/create" element={""} />
-        <Route path="/profile" element={""} />
-        <Route path="/admin" element={""} />
-      </Routes>
     </Router>
   );
 }

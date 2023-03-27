@@ -1,6 +1,6 @@
 import React from "react";
 
-const Login = () => {
+const LogIn = () => {
     return (
         <div className="bg-light px-5 py-2 rounded rounded-3 col-3 m-auto"> 
             <div className="text-muted text-center h3 my-3">Login Form</div>
@@ -13,7 +13,10 @@ const Login = () => {
                     <label htmlFor="password" className="form-label">Password </label>
                     <input type="password" name="password" id="password" className="form-control form-control-sm" placeholder="your password ..." required={true} />
                 </div>
-                <div className="form-group d-grid my-4">
+                <div className="form-group my-1">
+                    <span>Not a user yet? <a href="/signup">Sign Up Here.</a></span>
+                </div>
+                <div className="form-group d-grid my-3">
                     <input type="submit" value="Submit" name="submit" id="submit" className="btn btn-primary btn-sm fs-6 shadow shadow-3" />
                 </div>
             </form>
@@ -21,4 +24,4 @@ const Login = () => {
     )
 }
 
-export default Login;
+export default LogIn;
