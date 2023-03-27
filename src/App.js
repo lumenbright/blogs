@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router ,Route, Routes } from "react-router-dom";
 import { BlogFeed, CreateBlog, LogIn, LogOut, Profile, SignUp, UpdateBlog } from "./pages";
 import NavBar from "./components/NavBar";
+import Admin from "./pages/Admin/Admin";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <Route path="/feed" element={ <BlogFeed /> } />
           <Route path="/create" element={ <CreateBlog /> } />
           <Route path="/profile" element={ <Profile /> } />
-          <Route path="/admin" element={""} />
+          <Route path="/admin" element={ <Admin /> } />
         </Routes>
       </div>
     </Router>
